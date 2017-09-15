@@ -4,7 +4,7 @@
 使用ソフト:GNS3<br>
 ※GNS3を使用するにはCisco IOSが必要なので、実機を買ってFTPでIOSを吸い出す(用途はバックアップ的な意味で・・・)<br>
 自分はできるやつとできないやつがありました 2600や3600(うろ覚え)はできる 1812jはできない<br>
-この理由がわかる方はご教示いただきたいです\(*'ω'*)/<br><br>
+この理由がわかる方はご教示いただきたいです\(*'ω'*)/対応機種じゃないって以外で何か仕組みが違うのでしょうか?<br><br>
 
 図.01<br>
 <img src="https://raw.githubusercontent.com/sola-akiduki/networking_info/master/NetworkConfig/images/Networking01.PNG"><br>config(コマンド等)がうまくいかなかった場合はすみません(/ω＼)<br>
