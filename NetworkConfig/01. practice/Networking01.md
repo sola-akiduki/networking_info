@@ -45,3 +45,17 @@ router ospf 30
 network 172.16.10.0 0.0.0.255 area 10
 area 10 stub
 ```
+●R4
+```html
+conf t
+interface f0/0
+ip address 172.16.0.20 255.255.255.0
+no shutdown
+interface f0/1 
+ip address 172.16.20.1 255.255.255.0
+no shutdown
+exit
+router ospf 40
+network 172.16.0.0 0.0.0.255 area 0
+network 172.16.20.0 0.0.0.255 area 20
+```
