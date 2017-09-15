@@ -20,3 +20,17 @@ router ospf 10
 network 172.16.0.0 0.0.0.255 area 0
 ```
 ●R2
+```html
+conf t
+interface f0/0
+ip address 172.16.0.10 255.255.255.0
+no shutdown
+interface f0/1
+ip address 172.16.10.1 255.255.255.0
+no shutdown
+exit
+router ospf 20
+network 172.16.0.0 0.0.0.255 area 0
+network 172.16.10.0 0.0.0.255 area 10
+area 10 stub
+```
