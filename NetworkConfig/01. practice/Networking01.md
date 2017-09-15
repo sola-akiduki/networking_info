@@ -59,3 +59,117 @@ router ospf 40
 network 172.16.0.0 0.0.0.255 area 0
 network 172.16.20.0 0.0.0.255 area 20
 ```
+●R5
+```html
+conf t
+interface f0/1
+ip address 172.16.20.250 255.255.255.0
+no shutdown
+interface s0/0
+ip address 192.168.20.250 255.255.255.0
+no shutdown
+exit
+router ospf 50
+network 172.16.20.0 0.0.0.255 area 20
+redistribute rip metric 100 subnets
+router rip
+network 192.168.20.0
+redistribute ospf 50 metric 10
+version 2
+```
+●R6
+```html
+conf t
+interface f0/0
+ip address 172.16.0.30 255.255.255.0
+no shutdown
+interface f0/1
+ip address 172.16.30.1 255.255.255.0
+no shutdown
+exit
+router ospf 60
+network 172.16.0.0 0.0.0.255 area 0
+network 172.16.30.0 0.0.0.255 area 30
+area 30 nssa
+
+※オプション(RIPとEIGRP間で疎通できるようになるとメモにありました)
+area 30 nssa default-information-originate
+```
+●R7
+```html
+conf t
+interface f0/1
+ip address 172.16.30.2 255.255.255.0
+no shutdown
+exit
+router ospf 70
+network 172.16.30.0 0.0.0.255 area 30
+area 30 nssa
+```
+●R8
+```html
+conf t
+interface f0/1
+ip address 172.16.30.250 255.255.255.0
+no shutdown
+interface s0/0
+ip address 10.1.30.250 255.255.255.0
+no shutdown
+router ospf 80
+network 172.16.30.0 0.0.0.255 area 30
+redistribute eigrp 10 subnets
+area 30 nssa
+router eigrp 10
+network 10.1.30.0 0.0.0.255
+redistribute ospf 80 metric 100000 10 255 1 1500
+```
+●R9
+```html
+conf t
+interface f0/0
+ip address 10.1.20.1 255.255.255.0
+no shutdown
+interface s0/0
+ip address 10.1.30.1 255.255.255.0
+no shutdown
+exit
+router eigrp 10
+network 10.1.20.0 0.0.0.255
+network 10.1.30.0 0.0.0.255
+```
+●R10
+```html
+conf t
+interface f0/1
+ip address 192.168.10.1 255.255.255.0
+no shutdown
+interface s0/0
+ip address 192.168.20.1 255.255.255.0
+no shutdown
+exit
+router rip
+network 192.168.10.0
+network 192.168.20.0
+version 2
+```
+●R11
+```html
+conf t
+interface f0/0
+ip address 10.1.20.2 255.255.255.0
+no shutdown
+exit
+router eigrp 10
+network 10.1.20.0 0.0.0.255
+```
+●R12
+```html
+conf t
+interface f0/1
+ip address 192.168.10.2 255.255.255.0
+no shutdown
+exit
+router rip
+network 192.168.10.0
+version 2
+```
