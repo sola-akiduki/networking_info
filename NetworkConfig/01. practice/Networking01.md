@@ -10,10 +10,12 @@
 <img src="https://raw.githubusercontent.com/sola-akiduki/networking_info/master/NetworkConfig/images/Networking01.PNG"><br>2年前に作成したものなので、config(コマンド等)がうまくいかなかった場合はすみません(/ω＼)<br>
 「特権モード」からコピーしたコマンドを流していくイメージ<br><br>
 ●R1
-conf t
-interface f0/0
-ip address 172.16.0.1 255.255.255.0
-no shutdown
-exit
-router ospf 10
-network 172.16.0.0 0.0.0.255 area 0
+```html
+conf t<br>
+interface f0/0<br>
+ip address 172.16.0.1 255.255.255.0<br>
+no shutdown<br>
+exit<br>
+router ospf 10<br>
+network 172.16.0.0 0.0.0.255 area 0<br>
+```
