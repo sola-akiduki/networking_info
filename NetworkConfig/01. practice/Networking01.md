@@ -19,3 +19,4 @@ exit
 router ospf 10
 network 172.16.0.0 0.0.0.255 area 0
 ```
+●R2
