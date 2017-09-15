@@ -5,4 +5,5 @@
 自分はできるやつとできないやつがありました 2600や3600(うろ覚え)はできる 1812jはできない<br>
 この理由がわかる方はご教示いただきたいです\(*'ω'*)/<br><br>
 
-図.01
+図.01<br>
+<img src="https://raw.githubusercontent.com/sola-akiduki/networking_info/master/NetworkConfig/images/Networking01.PNG"><br>
