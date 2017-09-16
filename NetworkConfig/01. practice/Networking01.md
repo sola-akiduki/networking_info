@@ -11,7 +11,7 @@
 「特権モード」からコピーしたコマンドを流していくイメージ<br><br>
 ●R1
 ```html
-conf t
+configure terminal
 interface f0/0
 ip address 172.16.0.1 255.255.255.0
 no shutdown
@@ -21,7 +21,7 @@ network 172.16.0.0 0.0.0.255 area 0
 ```
 ●R2
 ```html
-conf t
+configure terminal
 interface f0/0
 ip address 172.16.0.10 255.255.255.0
 no shutdown
@@ -36,7 +36,7 @@ area 10 stub
 ```
 ●R3
 ```html
-conf t
+configure terminal
 interface f0/1
 ip address 172.16.10.2 255.255.255.0
 no shutdown
@@ -47,7 +47,7 @@ area 10 stub
 ```
 ●R4
 ```html
-conf t
+configure terminal
 interface f0/0
 ip address 172.16.0.20 255.255.255.0
 no shutdown
@@ -61,7 +61,7 @@ network 172.16.20.0 0.0.0.255 area 20
 ```
 ●R5
 ```html
-conf t
+configure terminal
 interface f0/1
 ip address 172.16.20.250 255.255.255.0
 no shutdown
@@ -79,7 +79,7 @@ version 2
 ```
 ●R6
 ```html
-conf t
+configure terminal
 interface f0/0
 ip address 172.16.0.30 255.255.255.0
 no shutdown
@@ -97,7 +97,7 @@ area 30 nssa default-information-originate
 ```
 ●R7
 ```html
-conf t
+configure terminal
 interface f0/1
 ip address 172.16.30.2 255.255.255.0
 no shutdown
@@ -108,7 +108,7 @@ area 30 nssa
 ```
 ●R8
 ```html
-conf t
+configure terminal
 interface f0/1
 ip address 172.16.30.250 255.255.255.0
 no shutdown
@@ -125,7 +125,7 @@ redistribute ospf 80 metric 100000 10 255 1 1500
 ```
 ●R9
 ```html
-conf t
+configure terminal
 interface f0/0
 ip address 10.1.20.1 255.255.255.0
 no shutdown
@@ -139,7 +139,7 @@ network 10.1.30.0 0.0.0.255
 ```
 ●R10
 ```html
-conf t
+configure terminal
 interface f0/1
 ip address 192.168.10.1 255.255.255.0
 no shutdown
@@ -154,7 +154,7 @@ version 2
 ```
 ●R11
 ```html
-conf t
+configure terminal
 interface f0/0
 ip address 10.1.20.2 255.255.255.0
 no shutdown
@@ -164,7 +164,7 @@ network 10.1.20.0 0.0.0.255
 ```
 ●R12
 ```html
-conf t
+configure terminal
 interface f0/1
 ip address 192.168.10.2 255.255.255.0
 no shutdown
