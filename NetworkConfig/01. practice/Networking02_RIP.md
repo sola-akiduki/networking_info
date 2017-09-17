@@ -70,7 +70,75 @@ exit
 router rip
 network 172.16.0.0
 ```
-■図.2-2 \<RIP version1\><br>
+■図.2-2 \<RIP version2\><br>
 <img src="https://raw.githubusercontent.com/sola-akiduki/networking_info/master/NetworkConfig/images/Networking02_RIP_v2.PNG"><br><br>
+●R1
+```html
+configure terminal													
+interface f0/0															
+ip address 192.168.100.90 255.255.255.0															
+no shutdown															
+exit															
+router rip															
+network 192.168.100.0															
+version 2
+```
+●R2
+```html
+configure terminal
+interface f0/1
+ip address 192.168.100.100 255.255.255.0
+no shutdown
+interface f0/0
+ip address 192.168.101.110 255.255.255.0
+no shutdown
+exit
+router rip
+network 192.168.100.0
+network 192.168.101.0
+version 2
+```
+●R3
+```html
+configure terminal
+interface f0/0
+ip address 192.168.101.120 255.255.255.0
+no shutdown
+interface f0/1
+ip address 192.168.102.130 255.255.255.0
+no shutdown
+exit
+router rip
+network 192.168.101.0
+network 192.168.102.0
+version 2
+```
+●R4
+```html
+configure terminal
+interface f0/0
+ip address 192.168.102.140 255.255.255.0
+no shutdown
+interface f0/1
+ip address 192.168.103.150 255.255.255.0
+no shutdown
+exit
+router rip
+network 192.168.102.0
+network 192.168.103.0
+version 2
+```
+●R5
+```html
+configure terminal
+interface f0/0
+ip address 192.168.103.160 255.255.255.0
+no shutdown
+exit
+router rip
+network 192.168.103.0
+version 2
+```
+
 
 
