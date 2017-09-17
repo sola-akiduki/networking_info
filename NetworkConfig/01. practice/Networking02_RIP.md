@@ -9,7 +9,7 @@ v1とv2の違いとか<br>
 クラスフルとかクラスレスとかVLSMとか<br>
 #################################<br>
 
-■図.2-1<br>
+■図.2-1 \<RIP version1\><br>
 <img src="https://raw.githubusercontent.com/sola-akiduki/networking_info/master/NetworkConfig/images/Networking02_RIP_v1.PNG"><br><br>
 ●R1
 ```html
@@ -34,4 +34,16 @@ exit
 router rip
 network 172.16.0.0
 ```
-
+●R3
+```html
+configure terminal
+interface f0/0
+ip address 172.16.1.40 255.255.255.0
+no shutdown
+interface f0/1
+ip address 172.16.2.50 255.255.255.0
+no shutdown
+exit
+router rip
+network 172.16.0.0
+```
