@@ -74,13 +74,13 @@ network 172.16.0.0
 <img src="https://raw.githubusercontent.com/sola-akiduki/networking_info/master/NetworkConfig/images/Networking02_RIP_v2.PNG"><br><br>
 ●R1
 ```html
-configure terminal													
-interface f0/0															
-ip address 192.168.100.90 255.255.255.0															
-no shutdown															
-exit															
-router rip															
-network 192.168.100.0															
+configure terminal
+interface f0/0
+ip address 192.168.100.90 255.255.255.0
+no shutdown
+exit
+router rip
+network 192.168.100.0
 version 2
 ```
 ●R2
