@@ -60,4 +60,15 @@ exit
 router rip
 network 172.16.0.0
 ```
+●R5
+```html
+configure terminal
+interface f0/0
+ip address 172.16.3.80 255.255.255.0
+no shutdown
+exit
+router rip
+network 172.16.0.0
+```
+
 
