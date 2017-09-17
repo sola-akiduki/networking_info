@@ -70,5 +70,7 @@ exit
 router rip
 network 172.16.0.0
 ```
+■図.2-2 \<RIP version1\><br>
+<img src="https://raw.githubusercontent.com/sola-akiduki/networking_info/master/NetworkConfig/images/Networking02_RIP_v2.PNG"><br><br>
 
 
