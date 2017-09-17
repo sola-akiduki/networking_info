@@ -9,5 +9,6 @@ v1とv2の違いとか<br>
 クラスフルとかクラスレスとかVLSMとか<br>
 #################################<br>
 
-■図.2-1
+■図.2-1<br>
+<img src="https://raw.githubusercontent.com/sola-akiduki/networking_info/master/NetworkConfig/images/Networking02_RIP_v1.PNG">
 
