@@ -9,7 +9,6 @@
 バーチャルリンクとかHelloとか<br>
 #################################<br>
 
-・シングルエリア<br>
 ■図.3-1 \<OSPF シングルエリア\><br>
 <img src="https://github.com/sola-akiduki/networking_info/blob/master/NetworkConfig/images/Networking03OSPF.PNG"><br><br>
 ●R1
