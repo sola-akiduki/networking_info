@@ -23,7 +23,7 @@ network 192.168.1.0 0.0.0.255 area 0
 ```
 ●R2
 ```html
-conf t
+configure terminal
 interface f0/0
 ip address 192.168.2.1 255.255.255.0
 no shutdown
@@ -37,7 +37,7 @@ network 192.168.2.0 0.0.0.255 area 0
 ```
 ●R3
 ```html
-conf t
+configure terminal
 interface f0/0
 ip address 192.168.3.1 255.255.255.0
 no shutdown
@@ -51,7 +51,7 @@ network 192.168.3.0 0.0.0.255 area 0
 ```
 ●R4
 ```html
-conf t
+configure terminal
 interface f0/1
 ip address 192.168.3.2 255.255.255.0
 no shutdown
